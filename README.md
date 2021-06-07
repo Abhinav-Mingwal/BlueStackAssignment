@@ -16,30 +16,30 @@ along with that Role Based Access Properties are initialized as well which will 
 
 #Hierarchy Chart
 * ADMIN :
-    *READ -> user,office,department,supervisor,employee,shift,report,leave
-    *WRITE -> user,office,department,supervisor,employee,shift,report,leave
-    *EDIT -> user,office,department,supervisor,employee,shift,report,leave
-    *DELETE -> user,office,department,supervisor,employee,shift,report,leave
+    * READ -> user,office,department,supervisor,employee,shift,report,leave
+    * WRITE -> user,office,department,supervisor,employee,shift,report,leave
+    * EDIT -> user,office,department,supervisor,employee,shift,report,leave
+    * DELETE -> user,office,department,supervisor,employee,shift,report,leave
 * OFFICE_ADMIN :
-    *READ -> office,department,supervisor,employee,shift,report,leave
-    *WRITE -> department,supervisor,employee,shift,report,leave
-    *EDIT -> department,supervisor,employee,shift,report,leave
-    *DELETE -> department,supervisor,employee,shift,report,leave
+    * READ -> office,department,supervisor,employee,shift,report,leave
+    * WRITE -> department,supervisor,employee,shift,report,leave
+    * EDIT -> department,supervisor,employee,shift,report,leave
+    * DELETE -> department,supervisor,employee,shift,report,leave
 * DEPARTMENT_ADMIN :
-    *READ -> office,department,supervisor,employee,shift,report,leave
-    *WRITE -> supervisor,employee,shift,report,leave
-    *EDIT -> supervisor,employee,shift,report,leave
-    *DELETE -> supervisor,employee,shift,report,leave
+    * READ -> office,department,supervisor,employee,shift,report,leave
+    * WRITE -> supervisor,employee,shift,report,leave
+    * EDIT -> supervisor,employee,shift,report,leave
+    * DELETE -> supervisor,employee,shift,report,leave
 * EMPLOYEE :
-    *READ -> office,department,supervisor,employee,shift,report,leave
-    *WRITE -> leave
-    *EDIT -> leave
-    *DELETE -> leave
+    * READ -> office,department,supervisor,employee,shift,report,leave
+    * WRITE -> leave
+    * EDIT -> leave
+    * DELETE -> leave
 * SUPERVISOR :
-    *READ -> office,department,supervisor,employee,shift,report,leave
-    *WRITE -> 
-    *EDIT -> 
-    *DELETE -> 
+    * READ -> office,department,supervisor,employee,shift,report,leave
+    * WRITE -> 
+    * EDIT -> 
+    * DELETE -> 
 
 User Class uses Singleton Pattern in User Class along with execption which gets thrown if someone tries to run Clone method over it.
 
