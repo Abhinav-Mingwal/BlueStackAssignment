@@ -3,9 +3,6 @@ package com.abhinav;
 
 import com.abhinav.model.Response;
 import com.abhinav.model.User;
-
-import java.util.Arrays;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -98,6 +95,7 @@ public class Main {
     }
 
 
+    // state machine method to edit Users Role used by ADMIN only
     public static void editRoleHelper(Scanner scn, User user, String username, String title) {
         boolean flag = true;
         do {
@@ -164,6 +162,7 @@ public class Main {
         } while (flag);
     }
 
+
     public static void editUserProcess(Scanner scn, User user) {
         if (user.isUserAdmin()) {
             System.out.println();
@@ -206,10 +205,10 @@ public class Main {
         }
     }
 
+    //State Machine code for Admin Portal
     public static void followUpAdminProcess(Scanner scn, User user) {
         boolean flag = true;
         do {
-
             System.out.println();
             System.out.println("################################################################");
             System.out.println("Press 1 for login as another user");
@@ -246,6 +245,8 @@ public class Main {
         user.printUserRoles(user.getUsername());
     }
 
+
+    //State Machine code to access a resource and get Output based on whether user is allowed to perform action or not
     public static void AccessResourceProvidedProcess(Scanner scn, User user, User.RESOURCE resource) {
         boolean flag = true;
         do {
@@ -306,6 +307,7 @@ public class Main {
         } while (flag);
     }
 
+    // State Machine for Non-ADMIN users Portal
     public static void followUpNonAdminProcess(Scanner scn, User user) {
         boolean flag = true;
         do {
@@ -341,6 +343,7 @@ public class Main {
         } while (flag);
     }
 
+    //State Machine code that handles Login Change
     public static void adminProcessLooper(Scanner scn, User user) {
         if (user.isUserAdmin()) {
             String prevUser = user.getUsername();

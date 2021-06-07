@@ -13,6 +13,9 @@ public class User {
     private static User currentUser;
     private HashSet<ROLE> role;
 
+    private static final String ADMIN_USERNAME = "admin";
+    private static final String ADMIN_PASSWORD = "Admin@12345";
+
 
     //maps to store multi user <Key,Value> pairs
     static HashMap<String, User> usersMap;
@@ -30,7 +33,7 @@ public class User {
         if (currentUser == null) {
             HashSet<ROLE> set = new HashSet<>();
             set.add(ROLE.ADMIN);
-            currentUser = new User("root", "root", set);
+            currentUser = new User(ADMIN_USERNAME, ADMIN_PASSWORD, set);
             populateResources();
             usersMap = new HashMap<>();
             usersMap.put(currentUser.username, new User(currentUser.username, currentUser.password, set));
