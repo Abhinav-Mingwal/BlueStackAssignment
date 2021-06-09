@@ -58,6 +58,15 @@ there is only be one Admin in the system who'll be responsible for Creating othe
 
 
 
+# Code Running Script
+make sure java jdk is installed in your system
 
+cd BlueStackAssignment-master/src
+
+javac com/abhinav/Main.java
+
+java com/abhinav/Main  
+
+code will run
 
 
